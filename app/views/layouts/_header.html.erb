@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DB Associations</a>
+    </div>
+
+    <form class="form-inline">
+
+    <a class="btn btn-outline-primary disabled" href="/posts" role="button">
+      Hi <%= current_user.name %>
+    </a>
+    <div style="padding-left: 10px;">
+
+      <%= link_to "Log out", "/users/index", method: :delete , :class => "btn btn-outline-danger"%>
+    </div>
+    <div style="padding-left: 10px;">
+
+        <a class="btn btn-outline-primary" href="/users/index" role="button">
+        Login
+        </a>
+    </div>
+
+    <div style="padding-left: 10px;">
+      <a class="btn btn-outline-success" href="/users/new " role="button">
+      Sign Up
+      </a>
+    </div>
+
+    </form>
+  </div>
+</nav>
