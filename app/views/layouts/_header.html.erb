@@ -10,16 +10,6 @@
     <a class="btn btn-outline-primary disabled" href="/posts" role="button">
       Hi <%= current_user.name %>
     </a>
-    <div style="padding-left: 10px;">
-
-      <%= link_to "Log out", "/users/index", method: :delete , :class => "btn btn-outline-danger"%>
-    </div>
-    <div style="padding-left: 10px;">
-
-        <a class="btn btn-outline-primary" href="/users/index" role="button">
-        Login
-        </a>
-    </div>
 
     <div style="padding-left: 10px;">
       <a class="btn btn-outline-success" href="/users/new " role="button">
