@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-      <h1 class="mt-5">Private Posts</h1>
+      <h1 class="mt-5">Private Events</h1>
 
       <table class="table table-dark mt-5">
         <thead>
@@ -16,10 +16,11 @@
         <tbody>
           <% @users.each do |user| %>
             <tr >
+              <% if user == current_user %>
               <td class="align-middle"><%= user.name %></td>
               <td class="align-middle"><%= user.email%></td>
-              <td class="align-middle"><%= link_to 'Sign In', user , :class => "btn btn-outline-info align-middle"%></td>
-
+              <td class="align-middle"><%= link_to 'My Events', user , :class => "btn btn-outline-info align-middle"%></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>

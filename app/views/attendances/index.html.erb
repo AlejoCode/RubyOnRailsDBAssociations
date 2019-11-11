@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mt-4">
+      <h1> Attencances</h1>
+    </div>
+    <table class="table col-12 text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Creator</th>
+          <th>Attendee</th>
+        </tr>
+      </thead>
+      <tbody>
+           <% @Attencances.each do |attendance|%>
+          <tr>
+          if
+             <td><%= attendance.name %></td>
+             <td><%= attendance.name %></td>
+             <td><%= attendance.name %></td>
+             <td><%= attendance.name %></td>
+             <td><%= attendance.name %></td>
+           
+          </tr>
+      </tbody>
+    </table>
+<div class="col-12 text-center mt-5">
+    <div class="footer text-center  pt-3 pb-3">
+      <%= link_to 'New Event', new_event_path , :class => "btn btn-success mt-2" %>
+
+    </div>
+  </div>
+</div>

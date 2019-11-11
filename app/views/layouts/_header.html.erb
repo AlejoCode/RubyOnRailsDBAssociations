@@ -6,16 +6,25 @@
     </div>
 
     <form class="form-inline">
-
-    <a class="btn btn-outline-primary disabled" href="/posts" role="button">
-      Hi <%= current_user.name %>
-    </a>
-
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-success" href="/users/new " role="button">
-      Sign Up
+    <% if logged_in? %>
+      <a class="btn btn-outline-primary disabled" href="/users/<%= current_user.id %>" role="button">
+        Hi <%= current_user.name %>
       </a>
-    </div>
+      <div style="padding-left: 10px;">
+
+        <%= link_to "Log out", logout_path, method: :delete , :class => "btn btn-outline-danger"%>
+      </div>
+    <% else%>
+
+      <a class="btn btn-outline-primary" href="/login" role="button">
+      Login
+      </a>
+      <div style="padding-left: 10px;">
+        <a class="btn btn-outline-success" href="/users/new " role="button">
+        Sign Up
+        </a>
+      </div>
+    <% end %>
 
     </form>
   </div>

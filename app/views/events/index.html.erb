@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mt-4">
+      <h1> Events</h1>
+    </div>
+    <table class="table col-12 text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Creator</th>
+          <th>Attend</th>
+        </tr>
+      </thead>
+      <tbody>
+           <% @events.each do |event|%>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.user.name %></td>
+            <% if logged_in? and event.date >= Date.today %>
+            <td><a class="btn btn-outline-primary " href="#" role="button">
+            Attend  </a></td>  
+            <% end %>
+          </tr>
+          <% end %>
+          
+          </tr>
+      </tbody>
+    </table>
+<div class="col-12 text-center mt-5">
+    <div class="footer text-center  pt-3 pb-3">
+      <%= link_to 'New Event', new_event_path , :class => "btn btn-success mt-2" %>
+
+    </div>
+  </div>
+</div>

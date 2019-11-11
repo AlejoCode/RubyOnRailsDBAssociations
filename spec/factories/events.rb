@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :event do
-    title { "MyString" }
-    description { "MyString" }
-    date { "2019-11-07" }
+    title { "my Event" }
+    description { "This is my new private event " }
+    date { Date.current + 1 }
     location { "MyString" }
-    user { nil }
+    user {}
   end
 end
