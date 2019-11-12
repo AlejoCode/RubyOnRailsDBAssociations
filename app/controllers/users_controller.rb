@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     log_in(@user)
     @upcoming_events = @user.events.upcoming_events
     @past_events = @user.events.past_events
+    @today_events = @user.events.today_events
   end
 
   def new

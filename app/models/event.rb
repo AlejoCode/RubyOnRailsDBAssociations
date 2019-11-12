@@ -9,10 +9,12 @@ class Event < ApplicationRecord
   validates :user_id, presence: true
   scope :upcoming_events, -> { where('date >  ?', Date.today) }
   scope :past_events, -> {where('date < ? ', Date.today)}
+  scope :today_events, -> {where('date = ? ', Date.today)}
+
 
   def date_cannot_be_in_the_past
     if date.present? && date < Date.today
-      errors.add(:date, "date cannot be in the past")
+      errors.add(:date, "cannot be in the past")
     end
   end
 end

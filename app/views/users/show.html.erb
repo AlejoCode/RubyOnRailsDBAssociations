@@ -58,7 +58,32 @@
       </tbody>
     </table>
 
-    
+    <table class="table col-12 text-center">
+    <div class="col-12 text-center mt-4">
+    <h3>Todays Events</h3>
+  </div>
+    <thead class="thead-dark">
+       <tr>
+        <th >Title</th>
+        <th >Description</th>
+        <th >Date</th>
+        <th >Location</th>
+        <th>Creator</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @today_events.each do |event|%>
+        <tr>
+          <td><%= event.title %></td>
+          <td><%= event.description %></td>
+          <td><%= event.date %></td>
+          <td><%= event.location %></td>
+          <td><%= event.user.name %></td>  
+        </tr>
+        <% end %>
+  </table>
+
+
     <table class="table col-12 text-center">
       <div class="col-12 text-center mt-4">
       <h3>Upcoming Events</h3>
