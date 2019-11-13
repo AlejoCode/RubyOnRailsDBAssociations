@@ -1,24 +1,11 @@
-# README
+<h1>Rails Associations</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This collaborative project is focused on Assosiations, as a part of an assignment for microverse using sessions, associations between users, events, and attendances;  where users can create  events, and register himself to different events created by any other user.
 
-Things you may want to cover:
 
-* Ruby version
+<h1>Authors:</h1>
 
-* System dependencies
+<a href="https://github.com/AlejoCode">Daniel Alejandro Salgado</a>
+ --- <a href="https://github.com/gonjavi/">Gonzalo Javier Mancilla</a> --- 
+ 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
