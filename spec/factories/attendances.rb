@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :attendance do
-    attendee { "MyString" }
+    attendee { 'MyString' }
     user { nil }
     event { nil }
   end

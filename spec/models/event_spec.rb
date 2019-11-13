@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
@@ -33,9 +35,9 @@ RSpec.describe Event, type: :model do
     end
 
     it "validates if date is older than today's date" do
-      event = FactoryBot.build(:event, date: "2019-11-04", user_id: 1)
+      event = FactoryBot.build(:event, date: '2019-11-04', user_id: 1)
       event.valid?
-      expect(event.errors[:date]).to include("date cannot be in the past")
+      expect(event.errors[:date]).to include('date cannot be in the past')
     end
 
     it "validates if date is greater than today's date" do
