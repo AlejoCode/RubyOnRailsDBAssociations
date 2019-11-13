@@ -62,7 +62,5 @@ RSpec.describe Event, type: :model do
       event.valid?
       expect(event.errors[:user_id]).to include("can't be blank")
     end
-
-     
   end
 end

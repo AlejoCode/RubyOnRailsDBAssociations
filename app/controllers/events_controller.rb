@@ -1,9 +1,8 @@
 class EventsController < ApplicationController
   before_action :logged_in_user, only: %i[new create edit]
-  
+
   def index
     @events = Event.all
-    
   end
 
   def new
@@ -14,17 +13,15 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user_id = current_user.id
     if @event.save
-      redirect_to users_path
+      redirect_to events_path
     else
       flash.now[:danger] = 'Event was not created'
       render 'new'
     end
   end
 
-  def show; end
-
   private
-  
+
   def set_event
     @event = Event.find(params[:id])
   end

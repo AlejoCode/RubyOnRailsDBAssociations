@@ -24,8 +24,7 @@
             <td class="align-middle"><%= event.location %></td>
             <td class="align-middle"><%= event.user.name %></td>
             <% if logged_in? and event.date >= Date.today %>
-            
-            <td><%= link_to 'Attend', attend_path ,method: :post , :class => "btn  btn-outline-primary mt-2" %></td>  
+                <td><%= link_to 'Attend', attend_path(:event_id => event.id) ,method: :post, :class => "btn  btn-outline-primary mt-2" %></td> 
             <% end %>
           </tr>
           <% end %>

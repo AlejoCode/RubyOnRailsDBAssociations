@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-   gem "database_cleaner"
+  gem "database_cleaner"
   gem "rspec-rails"
   gem 'factory_bot_rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -6,10 +6,16 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">DB Associations</a>
     </div>
-
+    
+       
+      
     <form class="form-inline">
+     <ul>
+          <li><%= link_to "Attendeces", attendances_path %></li>
+          <li><%= link_to "Events", events_path %></li>
+        </ul>
     <% if logged_in? %>
-      <a class="btn btn-outline-primary disabled" href="/users/<%= current_user.id %>" role="button">
+      <a class="btn btn-outline-primary" href="/users/<%= current_user.id %>" role="button">
         Hi <%= current_user.name %>
       </a>
       <div style="padding-left: 10px;">

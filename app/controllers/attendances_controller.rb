@@ -1,27 +1,33 @@
 class AttendancesController < ApplicationController
-    before_action :logged_in_user, only: %i[new create edit]
+  before_action :logged_in_user, only: %i[new create]
   def index
     @attendances = Attendance.all
   end
 
+  def new
+    @attendance = Attendance.new(params[:event_id])
+  end
+
   def create
+    @attendance = Attendance.new(attendance_params)
     @attendance.attendee = current_user.name
-    @attendance.event_id = current_user.event_id
+    # @attendance.event_id = current_user.event_id
     @attendance.user_id = current_user.id
     if @attendance.save
-      redirect_to users_path
+      redirect_to attendances_path
     else
       flash.now[:danger] = 'Attendance was not created'
-      render 'new'
+      render 'index'
     end
   end
-  
-  def show; end
 
   private
 
-  def set_attentance
-    @attendance = Attendance.find(params[:attendee, :user_id, event_id])
+  def set_attendance
+    @attendance = Attendance.find(params[:id])
   end
-       
+
+  def attendance_params
+    params.permit(:event_id)
+  end
 end

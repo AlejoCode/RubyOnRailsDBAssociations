@@ -13,6 +13,5 @@ RSpec.describe Attendance, type: :model do
       attendance.valid?
       expect(attendance.errors[:event_id]).to include("can't be blank")
     end
-
   end
 end

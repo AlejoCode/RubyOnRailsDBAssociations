@@ -7,9 +7,11 @@ class UsersController < ApplicationController
 
   def show
     log_in(@user)
-    @upcoming_events = @user.events.upcoming_events
-    @past_events = @user.events.past_events
-    @today_events = @user.events.today_events
+    @upcoming_events = Event.all.upcoming_events
+    @past_events = Event.all.past_events
+    @today_events = Event.all.today_events
+    @attendances = Attendance.all
+    @attended_events = Event.all.past_events
   end
 
   def new
@@ -19,7 +21,7 @@ class UsersController < ApplicationController
   def edit
   end
 
-   def create
+  def create
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
@@ -30,7 +32,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-  end
+ end
 
   def update
     respond_to do |format|
@@ -53,7 +55,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def set_user
     @user = User.find(params[:id])
   end
