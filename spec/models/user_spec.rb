@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -5,7 +7,7 @@ RSpec.describe User, type: :model do
     it 'validates user name presence two digits' do
       user = FactoryBot.build(:user, name: '')
       user.valid?
-      expect(user.errors[:name]).to include("can't be blank", "is too short (minimum is 2 characters)")
+      expect(user.errors[:name]).to include("can't be blank", 'is too short (minimum is 2 characters)')
     end
 
     it 'validates user presence two digits' do
@@ -17,13 +19,13 @@ RSpec.describe User, type: :model do
     it 'validates email presence true' do
       user = FactoryBot.build(:user, email: '')
       user.valid?
-      expect(user.errors[:email]).to include("can't be blank", "is invalid")
+      expect(user.errors[:email]).to include("can't be blank", 'is invalid')
     end
 
     it 'validates email presence true' do
       user = FactoryBot.build(:user, email: 'steve')
       user.valid?
-      expect(user.errors[:email]).to include("is invalid")
+      expect(user.errors[:email]).to include('is invalid')
     end
 
     it 'validates password presence true' do
@@ -39,8 +41,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'has already been taken - email' do
-      u = User.create(name: "jey", email: 'st@steve.com', password_digest: '123456')
-      user = User.create(name: "jey", email: 'sT@steve.com', password_digest: '123456')
+      u = User.create(name: 'jey', email: 'st@steve.com', password_digest: '123456')
+      user = User.create(name: 'jey', email: 'sT@steve.com', password_digest: '123456')
       user.valid?
       expect(user.errors[:email]).to include('has already been taken')
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Event < ApplicationRecord
   belongs_to :user
   has_many :attendances, dependent: :destroy
@@ -13,8 +15,6 @@ class Event < ApplicationRecord
   default_scope { order(date: :desc) }
 
   def date_cannot_be_in_the_past
-    if date.present? && date < Date.today
-      errors.add(:date, "date cannot be in the past")
-    end
+    errors.add(:date, 'date cannot be in the past') if date.present? && date < Date.today
   end
 end
