@@ -3,16 +3,16 @@
 
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header d-none d-md-block">
       <a class="navbar-brand" href="#">DB Associations</a>
     </div>
     
        
       
     <form class="form-inline">
-     <ul>
-          <li><%= link_to "Attendeces", attendances_path %></li>
-          <li><%= link_to "Events", events_path %></li>
+     <ul class="nav">
+          <li class="nav-item pr-3"><%= link_to "Attendeces", attendances_path %></li>
+          <li class="nav-item pr-3"><%= link_to "Events", events_path %></li>
         </ul>
     <% if logged_in? %>
       <a class="btn btn-outline-primary" href="/users/<%= current_user.id %>" role="button">

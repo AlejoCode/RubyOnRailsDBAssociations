@@ -121,4 +121,6 @@ body {
 //   label {
 //     display: block;
 //   }
-  
+#sticky-footer {
+  flex-shrink: none;
+}
