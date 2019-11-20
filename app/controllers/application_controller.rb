@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     flash[:danger] = 'Please log in.'
     redirect_to login_url
   end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
 end
