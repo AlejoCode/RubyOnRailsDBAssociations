@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mt-4">
+      <h1> Attendances</h1>
+    </div>
+    <table class="table col-12 text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Creator</th>
+          <th>Attendee</th>
+        </tr>
+      </thead>
+      <tbody>
+           <% @attendances.each do |attendance|%>
+          <tr>
+          <td><%= attendance.event.title %></td>
+          <td><%= attendance.event.date %></td>
+          <td><%= attendance.event.location %></td>
+          <td><%= attendance.event.user.name %> </td>
+          <td><%= attendance.attendee %></td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+</div>

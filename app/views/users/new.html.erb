@@ -1,0 +1,24 @@
+<% provide(:title, "Sign Up") %>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-4">
+            <h1>New User</h1>
+
+        </div>
+        <div class="col-2 col-lg-d-none"></div>
+
+        <div class="col-8 text-center">
+
+            <%= render 'form', user: @user %>
+        </div>
+        <div class="col-2 col-lg-d-none"></div>
+
+        <div class="col-12 text-center mt-5">
+            <div class="footer text-center bg-light pt-3 pb-3">
+            <%= link_to 'Back', users_path , :class => "btn btn-outline-secondary"%>
+
+            </div>
+        </div>
+    </div>
+</div> 
+
