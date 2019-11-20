@@ -1,0 +1,18 @@
+linters:
+  rubocop:
+    fixer: true
+  csslint: {  }
+files:
+  ignore:
+    - 'bower_components/*'
+    - 'node_modules/*'
+fixers:
+  enable: true
+  
+files:
+  ignore:
+    - "bin/*"
+    - "db/*"
+    - "config/*"
+    - "Guardfile"
+    - "Rakefile"

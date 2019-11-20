@@ -1,0 +1,150 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mt-4">
+      <h1>  <%= @user.name %>'s Events</h1>
+    </div>
+
+    <table class="table col-12 text-center">
+      <div class="col-12 text-center mt-4">
+      <h3>Created Events </h3>
+    </div>
+      <thead class="thead-dark mt-4">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <% @user.events.each do |event|%>
+          <tr>
+            <% if event.user_id == current_user.id %>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.user.name %></td>  
+            <% end %>         
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+    <table class="table col-12 text-center">
+      <div class="col-12 text-center mt-4">
+      <h3>Going</h3>
+    </div>
+      <thead class="thead-dark mt-4">
+        <tr>
+          <th >Title</th>
+          <th >Description</th>
+          <th >Date</th>
+          <th >Location</th>
+          <th>Creator</th>
+          <th>Attendee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @attendances.each do |attendance|%>
+          <tr>
+          <% if attendance.user_id == current_user.id and attendance.event.date >= Date.today %>
+          <td><%= attendance.event.title %></td>
+          <td><%= attendance.event.description %></td>
+          <td><%= attendance.event.date %></td>
+          <td><%= attendance.event.location %></td>
+          <td><%= attendance.event.user.name %> </td>
+          <td><%= attendance.attendee %></td>
+          <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <table class="table col-12 text-center">
+    <div class="col-12 text-center mt-4">
+    <h3>Todays Events</h3>
+  </div>
+    <thead class="thead-dark mt-4">
+       <tr>
+        <th >Title</th>
+        <th >Description</th>
+        <th >Date</th>
+        <th >Location</th>
+        <th>Creator</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @today_events.each do |event|%>
+        <tr>
+          <td><%= event.title %></td>
+          <td><%= event.description %></td>
+          <td><%= event.date %></td>
+          <td><%= event.location %></td>
+          <td><%= event.user.name %></td>  
+        </tr>
+        <% end %>
+  </table>
+
+
+    <table class="table col-12 text-center">
+      <div class="col-12 text-center mt-4">
+      <h3>Upcoming Events</h3>
+    </div>
+      <thead class="thead-dark mt-4">
+         <tr>
+          <th >Title</th>
+          <th >Description</th>
+          <th >Date</th>
+          <th >Location</th>
+          <th>Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @upcoming_events.each do |event|%>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.user.name %></td>  
+          </tr>
+          <% end %>
+    </table>
+
+    <table class="table col-12 text-center">
+      <div class="col-12 text-center mt-4">
+      <h3>Past Events</h3>
+    </div>
+      <thead class="thead-dark mt-4">
+        <tr>
+          <th >Title</th>
+          <th >Description</th>
+          <th >Date</th>
+          <th >Location</th>
+          <th>Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+           <% @past_events.each do |event|%>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.user.name %></td>  
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+  <div class="col-12 text-center mt-5">
+    <div class="footer text-center  pt-3 pb-3">
+      <%= link_to 'New Event', new_event_path , :class => "btn btn-success mt-2" %>
+
+    </div>
+  </div>
+</div>

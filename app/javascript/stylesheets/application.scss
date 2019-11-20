@@ -1,0 +1,126 @@
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/_mixins.scss';
+@import '~bootstrap/scss/_root.scss';
+@import '~bootstrap/scss/_reboot.scss';
+@import '~bootstrap/scss/_type.scss';
+@import '~bootstrap/scss/_alert.scss';
+@import '~bootstrap/scss/_badge';
+@import '~bootstrap/scss/_breadcrumb';
+@import '~bootstrap/scss/_button-group';
+@import '~bootstrap/scss/_buttons';
+@import '~bootstrap/scss/_buttons.scss';
+@import '~bootstrap/scss/_card.scss';
+@import '~bootstrap/scss/_carousel.scss';
+@import '~bootstrap/scss/_close.scss';
+@import '~bootstrap/scss/_code.scss';
+@import '~bootstrap/scss/_custom-forms.scss';
+@import '~bootstrap/scss/_dropdown.scss';
+@import '~bootstrap/scss/_forms.scss';
+@import '~bootstrap/scss/_grid.scss';
+@import '~bootstrap/scss/_images.scss';
+@import '~bootstrap/scss/_input-group.scss';
+@import '~bootstrap/scss/_jumbotron.scss';
+@import '~bootstrap/scss/_list-group.scss';
+@import '~bootstrap/scss/_media.scss';
+@import '~bootstrap/scss/_modal.scss';
+@import '~bootstrap/scss/_nav.scss';
+@import '~bootstrap/scss/_navbar.scss';
+@import '~bootstrap/scss/_pagination.scss';
+@import '~bootstrap/scss/_popover.scss';
+@import '~bootstrap/scss/_print.scss';
+@import '~bootstrap/scss/_progress.scss';
+@import '~bootstrap/scss/_spinners.scss';
+@import '~bootstrap/scss/_tables.scss';
+@import '~bootstrap/scss/_toasts.scss';
+@import '~bootstrap/scss/_tooltip.scss';
+@import '~bootstrap/scss/_transitions.scss';
+@import '~bootstrap/scss/_utilities.scss';
+
+body {
+    background-color: #EFE2BA;
+    // color: #333;
+    // margin: 33px;
+    // font-family: verdana, arial, helvetica, sans-serif;
+    // font-size: 13px;
+    // line-height: 18px;
+  }
+  
+//   p, ol, ul, td {
+//     font-family: verdana, arial, helvetica, sans-serif;
+//     font-size: 13px;
+//     line-height: 18px;
+//   }
+  
+//   pre {
+//     background-color: #eee;
+//     padding: 10px;
+//     font-size: 11px;
+//   }
+  
+//   a {
+//     color: #000;
+  
+//     &:visited {
+//       color: #666;
+//     }
+  
+//     &:hover {
+//       color: #fff;
+//       background-color: #000;
+//     }
+//   }
+  
+//   th {
+//     padding-bottom: 5px;
+//   }
+  
+//   td {
+//     padding: 0 5px 7px;
+//   }
+  
+//   div {
+//     &.field, &.actions {
+//       margin-bottom: 10px;
+//     }
+//   }
+  
+//   #notice {
+//     color: green;
+//   }
+  
+//   .field_with_errors {
+//     padding: 2px;
+//     background-color: red;
+//     display: table;
+//   }
+  
+//   #error_explanation {
+//     width: 450px;
+//     border: 2px solid red;
+//     padding: 7px 7px 0;
+//     margin-bottom: 20px;
+//     background-color: #f0f0f0;
+  
+//     h2 {
+//       text-align: left;
+//       font-weight: bold;
+//       padding: 5px 5px 5px 15px;
+//       font-size: 12px;
+//       margin: -7px -7px 0;
+//       background-color: #c00;
+//       color: #fff;
+//     }
+  
+//     ul li {
+//       font-size: 12px;
+//       list-style: square;
+//     }
+//   }
+  
+//   label {
+//     display: block;
+//   }
+#sticky-footer {
+  flex-shrink: none;
+}
