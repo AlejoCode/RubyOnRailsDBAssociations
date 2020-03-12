@@ -19,8 +19,9 @@ The practice is in the link below:
 - Linkedin: [linkedin](https://www.linkedin.com/in/daniel-alejandro-salgado-sanchez-13a740b1/)
 
 
-<h2>Live version:</h2> 
-<a href="https://alejocode-rails-crud.herokuapp.com/">https://Dont forget to deploy it to heroku/</a>
+## Live Demo
+
+[Live Demo Link](https://alejocode-rails-crud.herokuapp.com/)>
 
 ## Getting Ruby Set up and necessary gems 
 
