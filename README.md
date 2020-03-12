@@ -5,11 +5,23 @@ This collaborative project is focused on Assosiations, as a part of an assignmen
 The practice is in the link below:
 <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations">www.theodinproject.com/associations</a>  
 
-<h2><b> Authors:</b></h2>
-<a href="https://github.com/AlejoCode">Daniel Alejandro Salgado</a>  --- <a href="https://github.com/gonjavi/">Gonzalo Javier Mancilla</a> 
+![screenshot](./railsbd.png)
 
-<h2>Live version:</h2> 
-<a href="https://alejocode-rails-crud.herokuapp.com/">https://Dont forget to deploy it to heroku/</a>
+## Authors:
+ 👤 **Gonza Javier Mancilla**
+
+- Github: [@github/gonjavi](https://github.com/gonjavi)
+- Linkedin: [linkedin](https://www.linkedin.com/in/g-javier-mancilla-a686a9178/)
+
+ 👤 **Daniel alejandro Salgado**
+
+- Github: [@github/alejocode](https://github.com/AlejoCode)
+- Linkedin: [linkedin](https://www.linkedin.com/in/daniel-alejandro-salgado-sanchez-13a740b1/)
+
+
+## Live Demo
+
+[Live Demo Link](https://alejocode-rails-crud.herokuapp.com/)>
 
 ## Getting Ruby Set up and necessary gems 
 
@@ -26,6 +38,16 @@ $ rails db:migrate
 ```bash
 $ rails s
 ```
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
 
 
 
