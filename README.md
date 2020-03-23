@@ -21,6 +21,27 @@ This collaborative project is focused on Assosiations, as a part of an assignmen
 
 [Live Demo Link](https://alejocode-rails-crud.herokuapp.com/)
 
+## Built With
+```bash
+  Ruby 2.6.3
+ ```
+ ```bash
+   Ruby on Rails 6.0.1
+ ```
+  ```bash
+   Html5
+ ```
+  ```bash
+   CSS3 - scss
+ ```
+  ```bash
+Bootstrap
+```
+  ```bash
+  PostgresSQL
+  ```
+
+
 ## Getting Ruby Set up and necessary gems 
 
 * You would install the latest version of the gems listed in the Gemfile by :
