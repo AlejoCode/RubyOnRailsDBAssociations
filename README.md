@@ -58,6 +58,12 @@ $ rails db:migrate
 $ rails s
 ```
 
+## RSpec Tests
+
+For RSpec testing run the following commands:
+
+- rails db:migrate RAILS_ENV=test
+- rspec --format documentation
 
 ## 🤝 Contributing
 
