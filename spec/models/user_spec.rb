@@ -40,7 +40,8 @@ RSpec.describe User, type: :model do
   end
 
   it 'has already been taken - email' do
-    user = User.create(name: 'jey', email: 'sT@steve.com', password_digest: '123456')
+    user1 = User.create(name: 'jey', email: 'steve@steve.com', password_digest: '123456')
+    user = User.create(name: 'jey', email: 'steve@steve.com', password_digest: '123456')
     user.valid?
     expect(user.errors[:email]).to include('has already been taken')
   end
