@@ -1,6 +1,6 @@
 
 <h1>Rails Associations :diamonds:	</h1> 
-This collaborative project is focused on Assosiations, as a part of an assignment for microverse using sessions, associations between users, events, and attendances;  where users can create  events, and register himself to different events created by any other user.
+This collaborative project is focused on Associations, as a part of an assignment for Microverse. The project features sessions, associations between users, events, and attendances. Users can create events and register themselves for different events created by any other user.
 
 
 ![screenshot](./railsbd.png)
